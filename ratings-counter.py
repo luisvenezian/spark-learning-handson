@@ -5,9 +5,14 @@ conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
 sc = SparkContext(conf = conf)
 
 lines = sc.textFile("file:///Users/luis.vanezian/Documents/spark-learning-handson/ml-100k/u.data")
-ratings = lines.map(lambda x: x.split()[2])
+
+# Getting rating column from dataset
+ratings = lines.map(lambda x: x.split()[2]) 
 result = ratings.countByValue()
 
 sortedResults = collections.OrderedDict(sorted(result.items()))
+
+print("Rating\tQtd")
 for key, value in sortedResults.items():
-    print("%s %i" % (key, value))
+    print("%s\t%i" % (key, value))
+
