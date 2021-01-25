@@ -1,0 +1,8 @@
+Running BFS iteration# 1
+('Carolina', ([], 1, 'GRAY'))
+('Juliana', ([], 1, 'GRAY'))
+('Victor', ([], 1, 'GRAY'))
+('Wesley', ([], 1, 'GRAY'))
+('Luis', (['Carolina', 'Juliana', 'Victor', 'Wesley'], 0, 'BLACK'))
+('Carolina', (['Juliana', 'Lorena', 'Luis'], 9999, 'WHITE'))
+('Lorena', (['Carolina'], 9999, 'WHITE'))
